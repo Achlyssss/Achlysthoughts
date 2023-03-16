@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achlys Posts</title>
+
+    <!-- ---------------- FUZZY BUBBLES ---------------- -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
+
+    <!-- ---------- CSS ----------- -->
+
+    <style>
+    * {
+        margin: 0;
+        border: 0;
+        padding: 0;
+        outline: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        background-color: #ffcbf2;
+        background-image: 
+        radial-gradient(at 47% 33%, hsl(181.90, 100%, 88%) 0, transparent 59%), 
+        radial-gradient(at 82% 65%, hsl(276.71, 100%, 83%) 0, transparent 55%);
+        font-family: 'Fuzzy Bubbles', cursive;
+    }
+
+    section .mainFrame {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 10%;
+        padding-top: 3rem;
+        height: 450px;
+        width: 400px;
+        border: 5px;
+        align-items: center;
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background: rgba(236, 188, 253, 0.91);
+        border-radius: 12px;
+        border: 1px solid rgba(209, 213, 219, 0.3);
+            
+    }
+
+    section h1 {
+        margin: 0;
+        
+    }
+
+    section h4 {
+        letter-spacing: 2px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    section button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin: auto;
+        font-family: 'Fuzzy Bubbles', cursive;
+        font-size: 16px;
+        font-weight: 600;
+        background: rgba(199, 125, 255, 0.68);
+        border-radius: 7px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.7px);
+        -webkit-backdrop-filter: blur(7.7px);
+        transition: all 500ms ease;
+    }
+
+    section button:hover {
+        background: rgba(199, 125, 255, 0.90);
+    }
+
+    section .subFrame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 15px;
+        width: 320px;
+        height: 270px;
+        padding: 30px;
+        border: 2px;
+        background: rgba(199, 125, 255, 0.68);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.7px);
+        -webkit-backdrop-filter: blur(7.7px);
+        z-index: 2;
+    }
+    
+    </style>
+
+</head>
+
+<body>
+
+    <section>
+        <div class="mainFrame">
+            <h1>Achlys' thoughts</h1>
+            <div class="subFrame">
+                <h4 id="tots">Most of the beautiful souls, holds the ugliest insecurities.</h4>
+            </div>
+            <button id="button">Next</button>
+        </div>
+    </section>
+    
+    <script>
+        
+        const thoughts = [
+            "tighter hugs.",
+            "if ur happiness can be someone's sadness would u still take it?",
+            "When taking care of you has been easier than taking care of myself.",
+            "Time moves slower when you miss sombody",
+            "things I'll never forget:\n \n " + "The way u treat me for \n" + "the first time, \n" + "\nand the last time.",
+            "The only people I can keep, \n are the ones who truly want to stay.",
+            "The worst goodbye is the one you never thought you'd have to say.",
+            "Who you want, and who you need are sometimes two different people.",
+            "simple things hits different",
+            "u're not the one to respond or react to fools. u remove urself from them",
+            "you must experience some emotions to truly understand.",
+            "May every kind thing you do is be out of love, not for love.",
+            "We are not always happy, there will be days when we don't like each other, I want you to know that I will stay that everyday I will choose you 'Always'.",
+            "Hi there, \n here's your smile, you forgot it. :>",
+            "We gon' be alright, We gon' be okay, Everything will be fine, Just come along and sway.",
+            "Would u mind telling me those .. \nsilent fights,\nunexpressed feelings, and ur unsaid thoughts.",
+            
+        ]
+
+        const button = document.getElementById("button");
+
+        button.addEventListener("click", nextSlide)
+
+        function nextSlide(){
+            x = thoughts [Math.floor(Math.random()*thoughts.length)];
+            document.getElementById("tots").innerHTML = x;
+        }
+
+
+    </script>
+
+</body>
+</html>
